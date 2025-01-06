@@ -1,0 +1,97 @@
+Customer added: Customer[Name=Andrew Robertson, ParcelID=X919]
+Customer loaded: Name=Andrew Robertson, Parcel ID=X919
+Customer added: Customer[Name=Ann Jones, ParcelID=X064]
+Customer loaded: Name=Ann Jones, Parcel ID=X064
+Customer added: Customer[Name=Blair Foster, ParcelID=X682]
+Customer loaded: Name=Blair Foster, Parcel ID=X682
+Customer added: Customer[Name=Bob Dawson, ParcelID=X780]
+Customer loaded: Name=Bob Dawson, Parcel ID=X780
+Customer added: Customer[Name=Chris Smith, ParcelID=X782]
+Customer loaded: Name=Chris Smith, Parcel ID=X782
+Customer added: Customer[Name=Dave Jackson, ParcelID=X316]
+Customer loaded: Name=Dave Jackson, Parcel ID=X316
+Customer added: Customer[Name=David Hunter, ParcelID=X278]
+Customer loaded: Name=David Hunter, Parcel ID=X278
+Customer added: Customer[Name=Donald Murray, ParcelID=X720]
+Customer loaded: Name=Donald Murray, Parcel ID=X720
+Customer added: Customer[Name=Fiona Thoms, ParcelID=X475]
+Customer loaded: Name=Fiona Thoms, Parcel ID=X475
+Customer added: Customer[Name=Gillian Hamilton, ParcelID=X386]
+Customer loaded: Name=Gillian Hamilton, Parcel ID=X386
+Customer added: Customer[Name=Harry Johnston, ParcelID=X857]
+Customer loaded: Name=Harry Johnston, Parcel ID=X857
+Customer added: Customer[Name=Helen Webster, ParcelID=X309]
+Customer loaded: Name=Helen Webster, Parcel ID=X309
+Customer added: Customer[Name=Jack Houston, ParcelID=X733]
+Customer loaded: Name=Jack Houston, Parcel ID=X733
+Customer added: Customer[Name=Jo Hill, ParcelID=X285]
+Customer loaded: Name=Jo Hill, Parcel ID=X285
+Customer added: Customer[Name=Joe Woods, ParcelID=X213]
+Customer loaded: Name=Joe Woods, Parcel ID=X213
+Customer added: Customer[Name=John Brown, ParcelID=X009]
+Customer loaded: Name=John Brown, Parcel ID=X009
+Customer added: Customer[Name=Judy Hilman, ParcelID=X904]
+Customer loaded: Name=Judy Hilman, Parcel ID=X904
+Customer added: Customer[Name=Keith Burns, ParcelID=X552]
+Customer loaded: Name=Keith Burns, Parcel ID=X552
+Customer added: Customer[Name=Lily Watson, ParcelID=X121]
+Customer loaded: Name=Lily Watson, Parcel ID=X121
+Customer added: Customer[Name=Lucy Grey, ParcelID=X025]
+Customer loaded: Name=Lucy Grey, Parcel ID=X025
+Customer added: Customer[Name=Mary Brown, ParcelID=X198]
+Customer loaded: Name=Mary Brown, Parcel ID=X198
+Customer added: Customer[Name=Pamela Field, ParcelID=X521]
+Customer loaded: Name=Pamela Field, Parcel ID=X521
+Customer added: Customer[Name=Peter White, ParcelID=X036]
+Customer loaded: Name=Peter White, Parcel ID=X036
+Customer added: Customer[Name=Robert Murray, ParcelID=X606]
+Customer loaded: Name=Robert Murray, Parcel ID=X606
+Customer added: Customer[Name=Susan Turner, ParcelID=X214]
+Customer loaded: Name=Susan Turner, Parcel ID=X214
+Customer added: Customer[Name=Thomas Young, ParcelID=X507]
+Customer loaded: Name=Thomas Young, Parcel ID=X507
+Customer added: Customer[Name=Tim Smith, ParcelID=X020]
+Customer loaded: Name=Tim Smith, Parcel ID=X020
+Customer added: Customer[Name=Tony Lawson, ParcelID=X086]
+Customer loaded: Name=Tony Lawson, Parcel ID=X086
+Customer added: Customer[Name=Ursula Milton, ParcelID=X746]
+Customer loaded: Name=Ursula Milton, Parcel ID=X746
+Customer added: Customer[Name=Viola Nicholson, ParcelID=X540]
+Customer loaded: Name=Viola Nicholson, Parcel ID=X540
+Parcel loaded: ID=X009, Dimensions=9x1x9, Weight=9.0
+Parcel loaded: ID=X020, Dimensions=1x1x6, Weight=4.0
+Parcel loaded: ID=X025, Dimensions=7x1x4, Weight=9.0
+Parcel loaded: ID=X036, Dimensions=8x4x6, Weight=9.0
+Parcel loaded: ID=X064, Dimensions=8x4x1, Weight=8.0
+Parcel loaded: ID=X086, Dimensions=7x4x1, Weight=7.0
+Parcel loaded: ID=X121, Dimensions=3x7x2, Weight=3.0
+Parcel loaded: ID=X198, Dimensions=9x4x8, Weight=0.0
+Parcel loaded: ID=X213, Dimensions=4x8x5, Weight=2.0
+Parcel loaded: ID=X214, Dimensions=1x8x1, Weight=1.0
+Parcel loaded: ID=X278, Dimensions=5x3x1, Weight=0.0
+Parcel loaded: ID=X285, Dimensions=1x4x3, Weight=1.0
+Parcel loaded: ID=X309, Dimensions=1x2x8, Weight=5.0
+Parcel loaded: ID=X316, Dimensions=9x5x4, Weight=0.0
+Parcel loaded: ID=X386, Dimensions=9x1x6, Weight=5.0
+Parcel loaded: ID=X475, Dimensions=4x3x8, Weight=1.0
+Parcel loaded: ID=X507, Dimensions=5x3x9, Weight=8.0
+Parcel loaded: ID=X521, Dimensions=6x4x4, Weight=4.0
+Parcel loaded: ID=X540, Dimensions=9x2x5, Weight=4.0
+Parcel loaded: ID=X552, Dimensions=4x5x7, Weight=8.0
+Parcel loaded: ID=X606, Dimensions=8x8x4, Weight=2.0
+Parcel loaded: ID=X682, Dimensions=3x6x4, Weight=4.0
+Parcel loaded: ID=X720, Dimensions=4x2x1, Weight=3.0
+Parcel loaded: ID=X733, Dimensions=6x6x5, Weight=7.0
+Parcel loaded: ID=X746, Dimensions=4x4x9, Weight=5.0
+Parcel loaded: ID=X780, Dimensions=4x1x2, Weight=5.0
+Parcel loaded: ID=X782, Dimensions=5x3x2, Weight=7.0
+Parcel loaded: ID=X857, Dimensions=2x6x6, Weight=3.0
+Parcel loaded: ID=X904, Dimensions=4x1x4, Weight=9.0
+Parcel loaded: ID=X919, Dimensions=5x8x7, Weight=4.0
+Customer added: Customer[Name=X8999, ParcelID=7890]
+Customer added: Name=X8999, Parcel ID=7890
+Parcel added: Parcel[ID=7890, Dimensions=7x8x9, Weight=5.0]
+Processed Customer by Name: Name=X8999, Parcel ID=7890, Dimensions=7x8x9, Fee=$25.0
+Customer removed: Customer[Name=X8999, ParcelID=7890]
+Customer removed: Name=X8999
+Parcel removed: 7890
