@@ -1,12 +1,14 @@
 class Parcel {
     private String id;
-    private String dimensions; // Dimensions in lxwxh format
+    private String dimensions;
     private double weight;
+    private String status;
 
-    public Parcel(String id, String dimensions, double weight) {
+    public Parcel(String id, String dimensions, double weight, String status) {
         this.id = id;
         this.dimensions = dimensions;
         this.weight = weight;
+        this.status = status;
     }
 
     public String getId() {
@@ -21,8 +23,16 @@ class Parcel {
         return weight;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
-        return "Parcel[ID=" + id + ", Dimensions=" + dimensions + ", Weight=" + weight + "]";
+        return "Parcel[ID=" + id + ", Dimensions=" + dimensions + ", Weight=" + weight + ", Status=" + status + "]";
     }
 }
