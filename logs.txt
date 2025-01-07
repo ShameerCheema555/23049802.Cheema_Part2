@@ -95,3 +95,6 @@ Processed Customer by Name: Name=X8999, Parcel ID=7890, Dimensions=7x8x9, Fee=$2
 Customer removed: Customer[Name=X8999, ParcelID=7890]
 Customer removed: Name=X8999
 Parcel removed: 7890
+Customer added: Customer[Name=Ali, ParcelID=X0999]
+Customer added: Name=Ali, Parcel ID=X0999
+Parcel added: Parcel[ID=X0999, Dimensions=1x4x2, Weight=6.0, Status=Pending]
