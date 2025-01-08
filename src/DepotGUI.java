@@ -230,27 +230,55 @@ class DepotGUI {
                 return;
             }
 
+            // Check if the parcel already exists
+            if (manager.searchParcelById(id.trim()) != null) {
+              JOptionPane.showMessageDialog(frame, "Parcel ID already exists. Please enter a unique ID.", "Error", JOptionPane.ERROR_MESSAGE);
+              return;
+            }
+    
             String lengthStr = JOptionPane.showInputDialog(frame, "Enter Parcel Length:");
             String widthStr = JOptionPane.showInputDialog(frame, "Enter Parcel Width:");
             String heightStr = JOptionPane.showInputDialog(frame, "Enter Parcel Height:");
             String weightStr = JOptionPane.showInputDialog(frame, "Enter Parcel Weight:");
-
+    
             if (!lengthStr.matches("\\d+") || !widthStr.matches("\\d+") || !heightStr.matches("\\d+")) {
                 JOptionPane.showMessageDialog(frame, "Invalid dimensions. Length, Width, and Height must be numbers.", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-
+    
             double weight = Double.parseDouble(weightStr.trim());
             String dimensions = lengthStr.trim() + "x" + widthStr.trim() + "x" + heightStr.trim();
-
-            manager.addParcel(new Parcel(id.trim(), dimensions, weight, "Pending"));
-            updateParcelTable();
-            updateLogArea();
+    
+            // Adding the Parcel with the original format (length x width x height)
+            manager.addParcel(new Parcel(id.trim(), dimensions, weight));
+            
+            updateParcelTable();  // Update the parcel table with the new parcel
+            updateLogArea();  // Update the log area
             JOptionPane.showMessageDialog(frame, "Parcel added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(frame, "Error adding parcel: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    private void updateParcelTable() {
+        updateParcelTable(manager.getAllParcels());
+    }
+    
+    private void updateParcelTable(Collection<Parcel> parcels) {
+        DefaultTableModel model = new DefaultTableModel(new Object[]{"Parcel ID", "Dimensions", "Weight", "Status"}, 0);
+        for (Parcel parcel : parcels) {
+            // Extracting individual dimensions from the parcel dimensions string
+            String[] dimensions = parcel.getDimensions().split("x");
+            String length = dimensions.length > 0 ? dimensions[0] : "0";
+            String width = dimensions.length > 1 ? dimensions[1] : "0";
+            String height = dimensions.length > 2 ? dimensions[2] : "0";
+            
+            String status = Log.getInstance().toString().contains("Processed Parcel: ID=" + parcel.getId()) ? "Processed" : "Pending";
+            model.addRow(new Object[]{parcel.getId(), parcel.getDimensions(), parcel.getWeight(), status, length, width, height});
+        }
+        parcelTable.setModel(model);
+    }
+    
 
     private void calculateParcelFee() {
         String parcelId = JOptionPane.showInputDialog(frame, "Enter Parcel ID to Calculate Fee:");
@@ -272,19 +300,6 @@ class DepotGUI {
             model.addRow(new Object[]{customer.getName(), customer.getParcelId()});
         }
         customerTable.setModel(model);
-    }
-
-    private void updateParcelTable() {
-        updateParcelTable(manager.getAllParcels());
-    }
-
-    private void updateParcelTable(Collection<Parcel> parcels) {
-        DefaultTableModel model = new DefaultTableModel(new Object[]{"Parcel ID", "Dimensions", "Weight", "Status"}, 0);
-        for (Parcel parcel : parcels) {
-            String status = Log.getInstance().toString().contains("Processed Parcel: ID=" + parcel.getId()) ? "Processed" : "Pending";
-            model.addRow(new Object[]{parcel.getId(), parcel.getDimensions(), parcel.getWeight(), status});
-        }
-        parcelTable.setModel(model);
     }
 
     private void updateLogArea() {

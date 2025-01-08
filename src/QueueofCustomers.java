@@ -7,11 +7,13 @@ class QueueOfCustomers {
         customerQueue = new LinkedList<>();
     }
 
+    // Add customer to the queue
     public void addCustomer(Customer customer) {
         customerQueue.add(customer);
         Log.getInstance().logEvent("Customer added: " + customer);
     }
 
+    // Process the next customer in the queue
     public Customer processCustomer() {
         Customer customer = customerQueue.poll();
         if (customer != null) {
@@ -20,6 +22,7 @@ class QueueOfCustomers {
         return customer;
     }
 
+    // Remove customer by name (case-insensitive)
     public boolean removeCustomerByName(String name) {
         Iterator<Customer> iterator = customerQueue.iterator();
         while (iterator.hasNext()) {
@@ -34,7 +37,22 @@ class QueueOfCustomers {
         return false;
     }
 
+    // Check if a customer with the given name exists (case-insensitive)
+    public boolean containsCustomer(String name) {
+        for (Customer customer : customerQueue) {
+            if (customer.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Queue<Customer> getQueue() {
         return customerQueue;
+    }
+
+    public void clearQueue() {
+        customerQueue.clear();
+        Log.getInstance().logEvent("Queue cleared.");
     }
 }
